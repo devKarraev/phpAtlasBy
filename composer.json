@@ -1,0 +1,20 @@
+{
+    "name": "rasulkaraev/for-tests",
+    "authors": [
+        {
+            "name": "rasulkaraev",
+            "email": "rasulkaraev3@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Packages\\": "packages/"
+        }
+    },
+    "require": {
+        "telegram-bot/api": "^2.3",
+        "guzzlehttp/guzzle": "^7.4",
+        "anam/phantommagick": "^2.0"
+    }
+}
