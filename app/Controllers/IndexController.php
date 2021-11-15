@@ -45,7 +45,9 @@ class IndexController
     public function execute()
     {
         $data = $this->httpHelper->makeRequest($this->atlasHelper->ATLAS_URL);
-        $filteredRides = $this->atlasHelper->getFilteredRides($data);
+        if (!$filteredRides = $this->atlasHelper->getFilteredRides($data)) {
+            return;
+        }
         $htmlRows = $this->atlasHelper->generateTableRows($filteredRides);
 
         try {
