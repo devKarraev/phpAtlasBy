@@ -104,6 +104,6 @@ class AtlasHelper
      */
     private static function getRides(object $data): array
     {
-        return array_map(fn($ride) => ['freeSeats' => $ride->freeSeats, 'departure' => explode('T', $ride->departure)[1]], $data->rides);
+        return array_map(fn($ride) => ['freeSeats' => $ride->freeSeats, 'departure' => explode('T', $ride->pickupStops[0]->datetime)[1]], $data->rides);
     }
 }
